@@ -9,7 +9,10 @@ class GalleryList extends Component {
     render(){
         return(
             <>
-            <p>hello</p>
+            <p>It's my life</p>
+            <p>It's now or never</p>
+            <p>I ain't gonna live forever</p>
+            <p>I just wanna live while I'm alive</p>
             {this.props.listOfPics.map( (pic)=>{
                 return(
                     <GalleryItem key={pic.id}pic={pic}
