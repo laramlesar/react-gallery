@@ -28,21 +28,29 @@ class GalleryItem extends Component {
         });
         }
         render() {
-        let showPic = (
-        <img src={this.props.pic.path} alt={this.props.pic.description} />
-        );
+        //let showPic = (
+        //<img src={this.props.pic.path} alt={this.props.pic.description} />
+        //);
+        
         //let showPic =(<img src='images/baptism_river.jpg' alt="poop nuggets" />);
-        if (this.state.showDescription === true) {
-            showPic = <p>{this.props.item.description}</p>;
-        }
+        
+        //if (this.state.showDescription === true) {
+         //   showPic = <p>{this.props.item.description}</p>;
+       // }
         return (
+            <>
+            {this.state.desc ? 
+              <div onClick={this.showDescription}><h4>{this.props.pic.description}</h4></div> 
+            : <div onClick={this.showDescription}><img src={this.props.pic.path}/></div>}
+
             <div className="divdisplay">
-            <div onClick={this.showDescription}>{showPic}</div>
+            {/*<div onClick={this.showDescription}><img src={this.props.pic.path}/></div>*/}
             <button onClick={this.likePic(this.props.pic.id)}>Like</button>
             {/*<button onClick={this.likePic('1')}>Like</button>*/}
             <p>{this.props.pic.likes} likes</p>
-           
+            
             </div>
+            </>
         );
         }
         }
