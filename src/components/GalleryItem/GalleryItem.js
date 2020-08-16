@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+//import GalleryList from '../GalleryList/GalleryList.js',
+//import axios from 'axios';
 
 
 class GalleryItem extends Component {
@@ -11,17 +12,18 @@ class GalleryItem extends Component {
        //this.setState({
            //desc : !this.state.desc
      //  })
- //  }
-    
+ //  } 
+ //like button function will also go in here
+ //conditional rendering   
 
 
 
     render(){ 
-        console.log(this.props.galleryItems);
+        //console.log('lol',this.props.pics.path);
         return(
             <>
             <p>{this.props.galleryItems}</p>
-            {/*<img src={require("../../public/images/panda.jpg")} alt=""/>*/}
+            {/*{<img src={require("../../public/images/panda.jpg")} alt=""/>}*/}
             </>
         )
     }

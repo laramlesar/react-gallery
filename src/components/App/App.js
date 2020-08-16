@@ -5,8 +5,15 @@ import GalleryItem from '../GalleryItem/GalleryItem.js';
 import GalleryList from '../GalleryList/GalleryList.js';
 
 class App extends Component {
+  //right now images hard coded will research how to change
   state = {
     galleryItems: [
+     // {
+      //  id : 0,
+      //  path : '',
+     //  description : '',
+     //   likes : 0,
+     // }
        { id: 1, path: '../../public/images/baptism_river.jpg', description: 'Photo of the trail leading to the Baptism River', likes: 0 },
        { id: 2, path: '../../public/images/my_dad.jpg', description: 'Not a goat.', likes: 0 },
        { id: 3, path: '../../public/images/old_work_car.jpg', description: 'My Grandpas work car that is in a museum now, he did not work with goats.', likes: 0 },
@@ -48,6 +55,7 @@ class App extends Component {
         <GalleryItem/>
         <GalleryList
           listOfPics={this.state.galleryItems}
+          getGallery={this.getGallery}
         />
         
       </div>
